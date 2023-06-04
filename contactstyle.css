@@ -1,0 +1,148 @@
+    @property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+    }
+
+    :root {
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .navbar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    background: color #1a1a1a;;
+    }
+
+    .footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    background: #1a1a1a;
+    color: #fff;
+    height: 80px;
+    }
+
+    .link-group{
+    list-style: none;
+    display: flex;
+    }
+
+    .link a{
+    color:#fff;
+    opacity: 0.5;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 10px 30px;
+    margin: 0 20px;
+    line-height: 80px;
+    transition: .5s;
+    font-size: 20px;
+    }
+
+    .link a:hover, .link.active a{
+    opacity: 1;
+    }
+
+    body{
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    margin: auto;
+    min-height: 100vh;
+    background-color: #191919;
+    font-family: 'Nunito', sans-serif;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    }
+
+    .card {
+        margin-top: 150px;
+    background: #191c29;
+    width: var(--card-width);
+    height: var(--card-height);
+    padding: 3px;
+    position: relative;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.5em;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    }
+
+    .card:hover {
+    color: rgb(252, 252, 252);
+    transition: color 1s;
+    }
+    .card:hover:before, .card:hover:after {
+     animation: none;
+     opacity: 0;
+    }
+
+
+    .card::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+    var(--rotate)
+    , #000000, #FFD977 43%, #811CBF);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+    }
+
+    .card::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+        var(--rotate)
+        , #000000, #FFD977 43%, #811CBF);
+    opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+    }
+
+    @keyframes spin {
+    0% {
+     --rotate: 0deg;
+    }
+    100% {
+    --rotate: 360deg;
+    }
+    }
+
+   

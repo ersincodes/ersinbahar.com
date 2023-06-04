@@ -1,0 +1,46 @@
+<html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ersin Bahar</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul class="link-group">
+                <li class="link"><a href="Portfolio.html">Home</a></li>
+                <li class="link"><a href="myprojects.html">Projects</a></li>
+                <li class="link"><a href="about.html">About</a></li>
+                <li class="link"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <section class="home-section active">
+            <h1 class=hero-heading>Hello,I am Ersin</h1>
+            <img src="ersinbaharcomportfolio\image00028.jpeg" class="hero-img" alt="">
+        </section>
+        <div class="btn-trials">
+            <a href="myprojects.html">
+                <button class="btn-1">Continue</button> 
+              </a>     
+        </div>
+        <footer class="footer">
+            <p>&copy; 2023 Ersin Bahar. All rights reserved.</p>
+        </footer>
+        <script>
+            const heroheading = document.querySelector('.hero-heading');
+            heroheading.innerHTML =heroheading.textContent.replace(/\S/sg,"<span>$&</span>");
+
+            const letters = document.querySelectorAll('span');
+            for(let i=0;i<letters.length;i++){
+                letters[i].addEventListener("mouseover",function(){
+                    letters[i].classList.add('active');
+                })
+            }
+        </script>
+    </body>
+    </html>
+</html>
+
