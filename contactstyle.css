@@ -62,7 +62,7 @@
 
     body{
     width: 100%;
-    max-width: 1400px;
+    max-width: auto;
     display: flex;
     margin: auto;
     min-height: 100vh;

@@ -8,7 +8,7 @@
 
 body{
     width: 100%;
-    max-width: 1400px;
+    max-width: auto;
     display: block;
     margin: auto;
     min-height: 100vh;
@@ -97,6 +97,9 @@ body{
     font-size: 120px;
     font-weight: 300;
     user-select: none;
+    position: fixed;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .hero-heading span{
@@ -132,7 +135,7 @@ body{
 
 .hero-img{
     position: absolute;
-    right: 200;
+    right: 0;
     height: 760px;
     width: 31%;
     object-fit: cover;
@@ -142,10 +145,11 @@ body{
 
 .project-section{
     width: 100%;
+    max-width: fit-content;
     min-height: 100vh;
     pad: 150px 100px 100px;
-    position: fixed;
-    top: 0;
+    position: relative;
+    left: 13%;
     transition: 1s;
 }
 
@@ -240,8 +244,8 @@ body{
   button{
     font-family: 'Nunito', sans-serif,monospace;
     font-size: 20;
-      margin-top: 600px;
-      margin-left: 475px;
+      margin-top: 30%;
+      margin-left: 35%;
       position: relative;
       border: none;
       transition: .4s ease-in;
