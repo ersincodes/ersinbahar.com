@@ -1,14 +1,12 @@
 *{
-
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
-
 }
 
 body{
     width: 100%;
-    max-width: auto;
+    max-width: 1400px;
     display: block;
     margin: auto;
     min-height: 100vh;
@@ -16,10 +14,9 @@ body{
     font-family: 'Nunito', sans-serif;
 }
 
-
 .navbar{
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;
@@ -73,34 +70,11 @@ body{
     top: 0;
 }
 
-.project-heading {
-    font-size: 100px;
-    margin-left: 20rem;
-    margin-top: 10rem;
-    margin-bottom: 3rem;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.7);
-    padding: 10px 20px;
-    border-radius: .5rem;
-  }
-  
-.project-heading span{
-    position: relative;
-    cursor: pointer;
-}
-.project-heading span.active{
-    animation: smoke 2s linear backwards;
-    transform-origin:bottom;
-}
 .hero-heading{
     color:aliceblue;
     font-size: 120px;
     font-weight: 300;
     user-select: none;
-    position: relative;
-    margin-left: 10rem;
-    margin-right: 10rem;
 }
 
 .hero-heading span{
@@ -136,50 +110,65 @@ body{
 
 .hero-img{
     position: absolute;
-    right: 0;
-    height: 45rem;
-    width: 30rem;
+    right: 200;
+    height: 760px;
+    width: 31%;
     object-fit: cover;
     opacity: 0.3;
-    border-radius: 1rem;
+    border-radius: 10px;
 }
 
 .project-section{
     width: 100%;
-    max-width: fit-content;
     min-height: 100vh;
-    pad: 15rem 10rem 10rem;
-    position: relative;
-    left: 10rem;
+    pad: 150px 100px 100px;
+    position: fixed;
+    top: 0;
     transition: 1s;
+}
+
+
+.project-heading{
+    font-size: 100px;
+    background-color: #252525;
+    text-transform: capitalize;
+    text-align: center;
+    display: inline-block;
+    margin-left: 200px;
+    margin-top: 200px;
+    margin-bottom: 50px;
+    color: #1a1a1a;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 8px transparent;
 }
 
 .project-container{
     float:left;
     display: grid;
-    grid-template-columns: 1.25fr 1fr; 
-    gap: 0rem; 
+    grid-template-columns: 1.35fr 1fr; 
+    gap: 0px; 
 }
 .project-container1{
     float:left;
     display: grid;
     grid-template-columns: 1.35fr 1fr; 
-    gap: 0rem; 
+    gap: 0px; 
 }
 
 .project-card{
     position: relative;
-    width: 45rem;
-    height: 25rem;
+    width: 600px;
+    height: 350px;
     overflow: hidden;
-    border-radius: .5rem;
+    border-radius: 10px;
 }
 .project-card1{
     position: relative;
-    width: 45rem;
-    height: 25rem;
+    width: 600px;
+    height: 350px;
     overflow: hidden;
-    border-radius: .5rem;
+    border-radius: 10px;
 }
 
 .project-img{
@@ -245,16 +234,15 @@ body{
   button{
     font-family: 'Nunito', sans-serif,monospace;
     font-size: 20;
-      margin-top: 40rem;
-      margin-left: 40rem;
+      margin-top: 600px;
+      margin-left: 475px;
       position: relative;
       border: none;
       transition: .4s ease-in;
       z-index: 1;
-      width: 10rem;
-      height: 3rem;
-      border-radius: 1rem;
-      cursor: pointer;
+      width: 150px;
+      height: 50px;
+      border-radius: 10px;
   }
 
   button::before,
