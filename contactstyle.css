@@ -9,13 +9,12 @@
     --card-width: calc(var(--card-height) / 1.5);
     }
     *{
-        margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
     .navbar{
     width: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     display: flex;
@@ -62,7 +61,7 @@
 
     body{
     width: 100%;
-    max-width: 1400px;
+    max-width: auto;
     display: flex;
     margin: auto;
     min-height: 100vh;
@@ -72,6 +71,7 @@
     flex-direction: column;
     box-sizing: border-box;
     }
+  
 
     .card {
         margin-top: 150px;
